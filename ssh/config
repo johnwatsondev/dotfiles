@@ -1,0 +1,29 @@
+#============================== GitHub ===========================
+
+#johnwatsondev
+Host github.com
+     HostName github.com
+     User git
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/id_rsa_jwdev
+     IdentitiesOnly yes
+
+#============================== Coding.net ===========================
+
+#johnwatsondev
+Host coding-jwdev
+    HostName git.coding.net
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_coding_jwdev
+    IdentitiesOnly yes
+
+#============================== vultr london ===========================
+
+Host 45.76.138.35
+    hostname 45.76.138.35
+    User root
+    #PreferredAuthentications publickey
+    PasswordAuthentication yes
+    IdentityFile ~/.ssh/vultr_johnwatsondev_tokyo_rsa
+    #IdentitiesOnly yes

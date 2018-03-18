@@ -1,0 +1,87 @@
+" =========================== Common config =======================
+" Mac OS X clipboard sharing
+" http://vim.wikia.com/wiki/Mac_OS_X_clipboard_sharing
+set clipboard=unnamed
+
+set wrap
+
+" size of a hard tabstop
+set tabstop=2     " 设置Tab键的宽度        [等同的空格个数]
+set shiftwidth=2  " 每一次缩进对应的空格数
+set softtabstop=2 " 按退格键时可以一次删掉 2 个空格
+
+" 解绑正常模式下的该键位自定义映射
+nunmap H
+nunmap L
+
+" https://github.com/af/dotfiles/blob/master/vim/init.vim
+
+" Save current file every time we leave insert mode or hit <esc>:
+" Note that the autocmd repeats the mapping each time we leave insert mode,
+" this doesn't seem to be a problem in practice.
+"
+" Alternative approaches (which didn't seem to work as well for my needs):
+" set autowriteall   (couldn't get this to work)
+" :au FocusLost * :wa
+" autocmd InsertLeave * if expand('%') != '' | update | endif
+" (last one via http://blog.unixphilosopher.com/2015/02/five-weird-vim-tricks.html)
+" autocmd InsertLeave * nnoremap <esc> <esc>:w<CR>
+
+" https://stackoverflow.com/questions/14202082/vim-auto-save-current-file-when-focus-is-lost
+augroup AutoWrite
+      autocmd! BufLeave * :update
+augroup END
+
+" http://vim.wikia.com/wiki/Moving_lines_up_or_down
+
+" Mappings to move lines
+
+"nnoremap <C-j> :m .+1<CR>==
+"nnoremap <C-k> :m .-2<CR>==
+"inoremap <C-j> <Esc>:m .+1<CR>==gi
+"inoremap <C-k> <Esc>:m .-2<CR>==gi
+"vnoremap <C-j> :m '>+1<CR>gv=gv
+"vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" http://vim.wikia.com/wiki/Jump_to_a_line_number
+
+" :nnoremap <CR> G
+
+
+"nmap n :m +1<CR>
+"nmap m :m -2<CR>
+
+
+" =========================== Common config =======================
+
+" =========================== NERDTree ============================
+
+" NERDTree show hidden files default
+" let NERDTreeShowHidden=1
+
+" How can I open a NERDTree automatically when vim starts up if no files were specified?
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" NERDTress File highlighting
+" https://github.com/scrooloose/nerdtree/issues/433
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+" =========================== NERDTree ============================
