@@ -47,7 +47,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git sublime brew osx extract z zsh_reload zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(git sublime brew osx extract z zsh_reload zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -198,8 +198,8 @@ ulimit -S -n 2048
 #ulimit -S -n 1024
 
 # nvm
-export NVM_DIR="/Users/johnwatson/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # pyenv - Simple Python version management
 #export PYENV_ROOT=/usr/local/var/pyenv
@@ -207,7 +207,7 @@ export NVM_DIR="/Users/johnwatson/.nvm"
 #eval "$(pyenv virtualenv-init -)"
 
 # rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # zsh-completions
 autoload -U compinit && compinit
