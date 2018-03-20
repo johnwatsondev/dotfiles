@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 14,
+        "colorSelected" : "#A2CD81E5",
+        "font" : "Courier",
+        "color" : "#E7827DB2"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#D190E3FF",
+        "font" : "Courier",
+        "color" : "#C678DDF2"
+      },
+      "backgroundSelected" : "#636D8366",
+      "text" : {
+        "size" : 13,
+        "colorSelected" : "#63A0FFFF",
+        "font" : "Lucida Grande",
+        "color" : "#528BFFFF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 8,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#282C34E5",
+      "spacing" : 10,
+      "text" : {
+        "size" : 16,
+        "colorSelected" : "#000000FF",
+        "font" : "Geneva",
+        "color" : "#56B6F8FF"
+      },
+      "backgroundSelected" : "#B2D7FFFF"
+    },
+    "window" : {
+      "color" : "#282C34FC",
+      "paddingHorizontal" : 10,
+      "width" : 620,
+      "borderPadding" : 10,
+      "borderColor" : "#F5F9FF00",
+      "blur" : 0,
+      "roundness" : 3,
+      "paddingVertical" : 10
+    },
+    "credit" : "JohnWatson",
+    "separator" : {
+      "color" : "#BFBFBF26",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#BFBFBF4C",
+      "thickness" : 2
+    },
+    "name" : "JohnWatsonDev (v2)"
+  }
+}
