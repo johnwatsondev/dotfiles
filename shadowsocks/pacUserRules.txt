@@ -1,0 +1,15 @@
+||javpop.com/*
+||www.avupload.com/*
+||www.w3schools.com/*
+||graphql.org/*
+||hacklang.org/*
+||hhvm.com/*
+||wiki.ecmascript.org/*
+||*.1password.com/*
+||code.energy/*
+||swiftweekly.com/
+||iosdevweekly.com/
+||weeklycocoa.news/
+||*raywenderlich.com/
+||*.googleblog.com/
+||frescolib.org/
