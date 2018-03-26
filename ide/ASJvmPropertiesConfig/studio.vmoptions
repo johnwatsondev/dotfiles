@@ -1,0 +1,13 @@
+#
+# *DO NOT* modify this file directly. If there is a value that you would like to override,
+# please add it to your user specific configuration file.
+#
+# See http://tools.android.com/tech-docs/configuration
+#
+-Xms512m
+-Xmx8192m
+-XX:MaxPermSize=768m
+-XX:ReservedCodeCacheSize=768m
+
+# Sets the size of the allocated class metadata space that will trigger a GC the first time it is exceeded, defaul max value is 350m
+-XX:MetaspaceSize=512m
