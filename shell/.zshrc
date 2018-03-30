@@ -47,7 +47,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git sublime brew osx extract z zsh_reload zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
+plugins=(git sublime osx extract z zsh_reload zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -58,14 +58,18 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # curl with openssl for building android source 7.1+
 export PATH=/usr/local/opt/curl/bin:$PATH
 
+# Maven
+# I used brew install maven@3.0
+#export MAVEN_HOME=/usr/local/Cellar/maven@3.0/3.0.5
+
 # Basic android config
-export ANDROID_HOME=/AndroidContent/AndroidSDK/android-sdk-macosx
+export ANDROID_HOME=~/Development/android-sdk-macosx
 export ANDROID_NDK=$ANDROID_HOME/ndk-bundle
 
 # Buck build tool
 export ANDROID_SDK=$ANDROID_HOME
 #export ANDROID_NDK_REPOSITORY=$ANDROID_HOME/ndk-bundle
-export ANDROID_NDK_REPOSITORY=/AndroidContent/AndroidSDK
+export ANDROID_NDK_REPOSITORY=~/Development/android-sdk-macosx
 
 # Android tools config
 export PATH=$ANDROID_HOME/tools:$PATH
@@ -73,6 +77,15 @@ export PATH=$ANDROID_HOME/tools/bin:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/emulator:$PATH
 export PATH=$ANDROID_HOME/build-tools/27.0.3:$PATH
+
+# Gradle
+export GRADLE_HOME=~/Development/Software/Build/gradle-2.14.1
+export PATH=$GRADLE_HOME/bin:$PATH
+
+# Jadx
+# I used brew install jadx
+#export JADX_HOME=~/Development/Software/Build/jadx-0.6.1
+#export PATH=$JADX_HOME/bin:$PATH
 
 # Dotnet command tool
 export PATH=/usr/local/share/dotnet:$PATH
@@ -116,8 +129,11 @@ alias vimcfg="vi ~/.vimrc"
 
 alias sz='source ~/.zshrc'
 
-alias cdblog="cd /MyStuff/GitRepo_jwdev/johnwatsondev.github.io"
-alias cdtools="/AndroidContent/AndroidSDK/android-sdk-macosx/tools"
+#alias cdblog="cd /MyStuff/GitRepo_jwdev/johnwatsondev.github.io"
+alias cdsdk="cd $ANDROID_HOME"
+
+# adb shell
+alias adbdumptop='adb shell dumpsys activity | grep "mFocusedActivity"'
 
 # copy current pwd path
 # The pwd didn't work well in alish script (always print home dir because of the path of .zshrc)
@@ -186,8 +202,8 @@ function lantern_proxy_on() {
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-# setup go path
-export GOPATH=$HOME/go
+# setup go path (we need run "mkdir golang" in $HOME dir firstly)
+export GOPATH=$HOME/golang
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
@@ -198,16 +214,14 @@ ulimit -S -n 2048
 #ulimit -S -n 1024
 
 # nvm
-#export NVM_DIR="$HOME/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pyenv - Simple Python version management
 #export PYENV_ROOT=/usr/local/var/pyenv
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
-
-# rvm
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # zsh-completions
 autoload -U compinit && compinit

@@ -1,3 +1,4 @@
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 # iTerm Color
 
@@ -12,10 +13,6 @@ exportPS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
 
 #enables colorfor iTerm
 exportTERM=xterm-color
-
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-source ~/.profile
 
 #Hierarchy Viewer Variable
 export ANDROID_HVPROTO=ddm monitor
