@@ -15,3 +15,8 @@ $ which ruby
 $ which java
 /Users/johnwatson/.jenv/shims/java
 ```
+### Install other software
+[gg](https://github.com/qw3rtman/gg)
+```
+curl -fsSL git.io/gg.sh | bash
+```
