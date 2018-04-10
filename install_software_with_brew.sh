@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-brew install cmake git ccat dex2jar apktool vim
+brew install cmake git git-flow-avh ccat dex2jar apktool vim tig
