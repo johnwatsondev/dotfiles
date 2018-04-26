@@ -20,3 +20,7 @@ $ which java
 ```
 curl -fsSL git.io/gg.sh | bash
 ```
+### Change the mirror of homebrew
+https://mirror.tuna.tsinghua.edu.cn/help/homebrew/  
+https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git  
+https://mirrors.ustc.edu.cn/help/homebrew-cask.git.html
