@@ -5,4 +5,4 @@ brew install cmake git git-flow-avh ccat vim tig ripgrep aria2 graphviz tree
 brew install --HEAD pidcat
 
 # dependent on java
-brew install dex2jar dex2jar jadx
+brew install dex2jar apktool jadx
