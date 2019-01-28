@@ -1,6 +1,13 @@
 # dotfiles
 my dotfiles for Mac
 
+### git cannot use when reinstall MacOS
+Download the CommandLineTools via [download](https://developer.apple.com/download/)
+
+### download jdk
+[jdk6](https://support.apple.com/kb/dl1572?locale=en_US)
+[jdk8](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
 ### env config
 ```
 # johnwatson @ jwdev-mbp in ~ [13:51:17]
