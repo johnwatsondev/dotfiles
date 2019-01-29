@@ -6,3 +6,5 @@ brew install --HEAD pidcat
 
 # dependent on java
 brew install dex2jar apktool jadx
+
+brew tap homebrew/command-not-found
