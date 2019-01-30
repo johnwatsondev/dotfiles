@@ -1,0 +1,20 @@
+# SS_NG proxy
+function poff(){
+    unset http_proxy
+    unset https_proxy
+    echo -e "已关闭 http(s) 代理"
+}
+
+function ng_proxy_on() {
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+    export http_proxy="http://127.0.0.1:1087"
+    export https_proxy=$http_proxy
+    echo -e "已通过 SS_NG 开启 vultrLondon 代理"
+}
+
+function lantern_proxy_on() {
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+    export http_proxy="http://127.0.0.1:50196"
+    export https_proxy=$http_proxy
+    echo -e "已经开启 lantern 代理"
+}
