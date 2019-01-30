@@ -8,6 +8,9 @@ Download the CommandLineTools via [download](https://developer.apple.com/downloa
 [jdk6](https://support.apple.com/kb/dl1572?locale=en_US)
 [jdk8](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
+### download android sdk command tools
+[command-tools](https://developer.android.com/studio/#command-tools)
+
 ### env config
 ```
 # johnwatson @ jwdev-mbp in ~ [13:51:17]
