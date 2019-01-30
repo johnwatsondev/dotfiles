@@ -1,0 +1,22 @@
+# copy current pwd path
+function cwd(){
+  echo `pwd` | tr -d "\n" | pbcopy; echo "Copied `pwd`"
+}
+
+alias zshcfg="vi ~/.zshrc"
+alias vimcfg="vi ~/.vimrc"
+
+alias sz='source ~/.zshrc'
+
+alias cdandroidsdk="cd $ANDROID_HOME"
+
+# adb shell
+alias adbdumptop='adb shell dumpsys activity | grep "mFocusedActivity"'
+
+alias cat="ccat"
+
+# git alish
+alias gspl="git stash && git pull && git stash pop"
+
+alias vim='/usr/local/bin/vim'
+alias vi='vim'
